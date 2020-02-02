@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import './App.css'
 import { Todo } from './components/types'
-import TodoList from './components/TodoList'
-import TodoInput from './components/TodoInput'
+import TodoList from './components/organisms/TodoList'
+import TodoInput from './components/atoms/TodoInput'
 
 const initialState: Todo[] = [
   {

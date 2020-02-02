@@ -1,7 +1,7 @@
 import React from 'react'
-import EditModeButton from './EditModeButton'
-import EditModeTodoInput from './EditModeTodoInput'
-import { Todo } from './types'
+import EditModeButton from '../atoms/EditModeButton'
+import EditModeTodoInput from '../atoms/EditModeTodoInput'
+import { Todo } from '../types'
 
 type Props = {
   isShowUpdateForm: boolean

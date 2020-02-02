@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Todo } from './types'
+import { Todo } from '../types'
 import EditMode from './EditMode'
 
 type Props = {
