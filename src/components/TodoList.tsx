@@ -18,12 +18,6 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
     )
   }
 
-  // const todoUpdate = (selectedTodo: Todo, newTodoTitle: string) => {
-  // 	setTodos(todo => todo.map((todo: Todo) =>
-  // 			todo.id === selectedTodo ? { ...todos, title: newTodoTitle  } : selectedTodo
-  // 	))
-  // }
-
   const todoDelete = (selectedTodo: Todo) => {
     setTodos(todos => todos.filter(todo => todo.id !== selectedTodo.id))
   }
@@ -33,10 +27,11 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
       {todos.map(todo => (
         <TodoItem
           key={todo.id}
+          todos={todos}
           todo={todo}
           todoDone={todoDone}
-          // todoUpdate={todoUpdate}
           todoDelete={todoDelete}
+          setTodos={setTodos}
         />
       ))}
     </div>
