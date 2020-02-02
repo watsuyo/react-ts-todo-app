@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import { Todo } from './components/types'
+import TodoList from './components/TodoList'
+import TodoInput from './components/TodoInput'
 
-const App = () => {
+const initialState: Todo[] = [
+  {
+    id: 1,
+    title: 'マスクを注文する',
+    isDone: false
+  }
+]
+
+const App: React.FC = () => {
+  const [todos, setTodos] = useState(initialState)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoInput todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

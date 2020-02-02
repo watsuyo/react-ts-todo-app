@@ -1,0 +1,18 @@
+{
+  "extends": ["react-app"],
+  "plugins": ["prettier"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": ["off"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.ts*", "src/stories/**/*"]
+      }
+    ],
+    "object-curly-newline": ["error", { "consistent": true }],
+    "react/prop-types": ["off"],
+    "prettier/prettier": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-multiple-empty-lines": [2, { "max": 1 }]
+  }
+}
